@@ -7,9 +7,17 @@ export default function Page() {
 
 			<p className="mb-6 text-gray-500">Manage your recipes with Next.js and Auth.js</p>
 
-			<Link href="/login" className="rounded-md bg-blue-500 px-4 py-2 text-white">
-				Login
-			</Link>
+			<ul>
+				<Link href="/login" className="rounded-md bg-blue-500 px-4 py-2 text-white m-1">
+					Login
+				</Link>
+				<Link
+					href="/register"
+					className="rounded-md bg-blue-500 px-4 py-2 text-white m-1"
+				>
+					Create Account
+				</Link>
+			</ul>
 		</main>
 	);
 }
