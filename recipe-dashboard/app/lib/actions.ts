@@ -104,6 +104,8 @@ export async function deleteRecipe(id: string): Promise<void> {
 	}
 
 	revalidatePath("/dashboard/recipes");
+
+	redirect("/dashboard/recipes?deleted=true");
 }
 
 export async function updateRecipe(

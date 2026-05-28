@@ -13,9 +13,17 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default async function Page() {
+export default async function Page({
+	searchParams,
+}: {
+	searchParams?: Promise<{
+		deleted?: string;
+	}>;
+}) {
 	const session = await auth();
 	const recipes = await fetchRecipes();
+
+	const params = await searchParams;
 
 	return (
 		<main className="p-6">
@@ -29,9 +37,17 @@ export default async function Page() {
 					>
 						Create Recipe
 					</Link>
+
 					<LogoutButton />
 				</div>
 			</div>
+
+			{/* Success Message */}
+			{params?.deleted === "true" && (
+				<div className="mb-4 rounded bg-green-100 p-4 text-green-700">
+					Recipe deleted successfully.
+				</div>
+			)}
 
 			<h2 className="mb-6 text-3xl font-bold">Recipes</h2>
 
@@ -51,9 +67,10 @@ export default async function Page() {
 
 								<div className="p-4">
 									<h3 className="text-xl font-semibold">{recipe.title}</h3>
-									<p className="mt-2 line-clamp-3 text-sm text-gray-500">
+
+									{/* <p className="mt-2 line-clamp-3 text-sm text-gray-500">
 										{recipe.ingredients}
-									</p>
+									</p> */}
 								</div>
 							</div>
 						</Link>
