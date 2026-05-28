@@ -1,5 +1,10 @@
 import { fetchRecipeById } from "@/app/lib/data";
 import EditForm from "@/app/ui/recipes/edit-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Edit Recipe",
+};
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
 	const params = await props.params;

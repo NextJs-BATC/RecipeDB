@@ -5,6 +5,11 @@ import { fetchRecipes } from "@/app/lib/data";
 import DeleteButton from "@/app/ui/recipes/delete-button";
 import PencilIcon from "@heroicons/react/24/outline/PencilIcon";
 import LogoutButton from "@/app/ui/logout-button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Dashboard",
+};
 
 export const dynamic = "force-dynamic";
 

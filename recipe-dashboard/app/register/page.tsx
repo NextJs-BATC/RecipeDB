@@ -1,5 +1,10 @@
 import RegisterForm from "@/app/ui/register-form";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Register",
+};
 
 export default function Page() {
 	return (

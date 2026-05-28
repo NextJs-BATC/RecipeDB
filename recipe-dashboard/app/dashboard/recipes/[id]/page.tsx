@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { fetchRecipeById } from "@/app/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Recipe Info",
+};
 
 export const dynamic = "force-dynamic";
 
