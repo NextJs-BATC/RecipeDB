@@ -34,20 +34,18 @@ export default function LoginForm() {
 			onSubmit={handleSubmit}
 			className="flex w-full max-w-sm flex-col gap-4 rounded-lg border p-6 shadow"
 		>
-			<h1 className="text-2xl font-bold">Login</h1>
-
 			<input
 				name="email"
 				type="email"
 				placeholder="Email"
-				className="rounded border p-2"
+				className="w-full rounded border p-2"
 			/>
 
 			<input
 				name="password"
 				type="password"
 				placeholder="Password"
-				className="rounded border p-2"
+				className="w-full rounded border p-2"
 			/>
 
 			<button type="submit" className="rounded bg-blue-500 p-2 text-white">

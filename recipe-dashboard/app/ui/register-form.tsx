@@ -12,7 +12,10 @@ export default function RegisterForm() {
 	const [state, formAction] = useActionState(registerUser, initialState);
 
 	return (
-		<form action={formAction} className="space-y-4">
+		<form
+			action={formAction}
+			className="flex w-full max-w-sm flex-col gap-4 rounded-lg border p-6 shadow"
+		>
 			<input name="name" placeholder="Name" className="w-full rounded border p-2" />
 
 			<input
