@@ -20,18 +20,20 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
 		<main className="p-6">
 			<div className="mb-6 flex items-center justify-between">
 				<h1 className="text-3xl font-bold">{recipe.title}</h1>
-				<Link
-					href={`/dashboard/recipes/${recipe.id}/edit`}
-					className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-				>
-					Edit Recipe
-				</Link>
-				<Link
-					href="/dashboard/recipes"
-					className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-				>
-					Dashboard
-				</Link>
+				<div className="flex items-center gap-3">
+					<Link
+						href={`/dashboard/recipes/${recipe.id}/edit`}
+						className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+					>
+						Edit Recipe
+					</Link>
+					<Link
+						href="/dashboard/recipes"
+						className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+					>
+						Dashboard
+					</Link>
+				</div>
 			</div>
 
 			<div className="relative mb-6 h-80 w-full overflow-hidden rounded-lg">
